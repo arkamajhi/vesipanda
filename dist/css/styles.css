@@ -10,7 +10,72 @@
  * Copyright 2011-2022 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+
+
+ /* ===============================
+    6) CTA BUTTON (Interactive & Pulsing)
+    =============================== */
+
+
+
+
+ .cta-button {
+   font-size: 1rem;
+   padding: 12px 32px;
+   margin-bottom: 32px;
+   position: relative;
+   display: inline-block;
+   background: linear-gradient(135deg, var(--bs-blue) 0%, var(--bs-pink) 100%);
+   color: #ffffff;
+   font-size: 1.125rem;
+   font-weight: 500;
+   padding: 14px 40px;
+   border-radius: var(--radius-xl);
+   margin-bottom: 48px;
+   overflow: hidden;
+   transition: transform 0.2s ease, box-shadow 0.2s ease;
+   box-shadow: 0 4px 16px var(--shadow-light);
+   animation: fadeInUp 1.2s ease forwards, pulse 2.5s ease-in-out infinite 2s;
+ }
+ .cta-button:hover {
+   transform: translateY(-2px) scale(1.02);
+   box-shadow: 0 6px 24px var(--shadow-light);
+   background: linear-gradient(135deg, #0041a8 0%, #007acc 100%);
+ }
+ .cta-button:active {
+   transform: translateY(0) scale(0.98);
+   box-shadow: 0 3px 12px var(--shadow-light);
+   background: linear-gradient(135deg, #003387 0%, #0066aa 100%);
+ }
+ .cta-button::after {
+   content: "";
+   position: absolute;
+   width: 20px;
+   height: 20px;
+   background: rgba(255, 255, 255, 0.4);
+   border-radius: 50%;
+   opacity: 0;
+   transform: scale(0);
+   transition: transform 0.4s, opacity 0.8s;
+ }
+ .cta-button:focus::after,
+ .cta-button:active::after {
+   opacity: 1;
+   transform: scale(4);
+   transition: 0s;
+ }
+
 :root {
+  --primary-blue: #0052cc;
+  --primary-blue-light: #0090ff;
+  --background-offwhite: #f8f9fa;
+  --text-dark: #1f2a38;
+  --text-secondary: #4d5a6f;
+  --shadow-light: rgba(0, 82, 204, 0.2);
+  --shadow-hover: rgba(0, 0, 0, 0.05);
+  --radius-lg: 16px;
+  --radius-xl: 28px;
+
   --bs-blue: #1e30f3;
   --bs-indigo: #6610f2;
   --bs-purple: #6f42c1;
