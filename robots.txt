@@ -1,0 +1,8 @@
+# This website serves the following areas for local business listings:
+# Tampere, Kaleva, Hervanta, Tammela, Pyynikki, Amuri, Kissanmaa, Tesoma, Hatanpää, Pispala, ...
+# Full service list integrated via JSON-LD structured data.
+User-agent: *
+Allow: /
+Disallow:
+
+Sitemap: https://www.vesipanda.com/sitemap.xml
